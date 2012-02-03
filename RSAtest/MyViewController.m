@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self generateKeyPairRSA];
+    //[self generateKeyPairRSA];
     
 }
 
@@ -71,6 +71,7 @@ static const UInt8 publicKeyIdentifier[] = "com.apple.sample.publickey222\0";
 static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
 
 - (IBAction)start:(id)sender {
+    [self generateKeyPairRSA];
     [self Encryption];
     [self Decryption];
 }
