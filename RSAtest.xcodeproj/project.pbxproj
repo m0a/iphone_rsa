@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E16ED2F14DC123100E9E6D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E16ED2E14DC123100E9E6D2 /* UIKit.framework */; };
+		0E16ED3114DC123100E9E6D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E16ED3014DC123100E9E6D2 /* Foundation.framework */; };
+		0E16ED3314DC123100E9E6D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E16ED3214DC123100E9E6D2 /* CoreGraphics.framework */; };
+		0E16ED3914DC123100E9E6D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E16ED3714DC123100E9E6D2 /* InfoPlist.strings */; };
+		0E16ED3B14DC123100E9E6D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E16ED3A14DC123100E9E6D2 /* main.m */; };
+		0E16ED3F14DC123100E9E6D2 /* MyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E16ED3E14DC123100E9E6D2 /* MyAppDelegate.m */; };
+		0E16ED4214DC123100E9E6D2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E16ED4014DC123100E9E6D2 /* MainStoryboard.storyboard */; };
+		0E16ED4514DC123100E9E6D2 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E16ED4414DC123100E9E6D2 /* MyViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E16ED2A14DC123100E9E6D2 /* RSAtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSAtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E16ED2E14DC123100E9E6D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0E16ED3014DC123100E9E6D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0E16ED3214DC123100E9E6D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0E16ED3614DC123100E9E6D2 /* RSAtest-Info.plist */ = {isa = PBXFileReference; path = "RSAtest-Info.plist"; sourceTree = "<group>"; };
+		0E16ED3814DC123100E9E6D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E16ED3A14DC123100E9E6D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E16ED3C14DC123100E9E6D2 /* RSAtest-Prefix.pch */ = {isa = PBXFileReference; path = "RSAtest-Prefix.pch"; sourceTree = "<group>"; };
+		0E16ED3D14DC123100E9E6D2 /* MyAppDelegate.h */ = {isa = PBXFileReference; path = MyAppDelegate.h; sourceTree = "<group>"; };
+		0E16ED3E14DC123100E9E6D2 /* MyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAppDelegate.m; sourceTree = "<group>"; };
+		0E16ED4114DC123100E9E6D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0E16ED4314DC123100E9E6D2 /* MyViewController.h */ = {isa = PBXFileReference; path = MyViewController.h; sourceTree = "<group>"; };
+		0E16ED4414DC123100E9E6D2 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E16ED2714DC123100E9E6D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E16ED2F14DC123100E9E6D2 /* UIKit.framework in Frameworks */,
+				0E16ED3114DC123100E9E6D2 /* Foundation.framework in Frameworks */,
+				0E16ED3314DC123100E9E6D2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E16ED1F14DC123000E9E6D2 = {
+			isa = PBXGroup;
+			children = (
+				0E16ED3414DC123100E9E6D2 /* RSAtest */,
+				0E16ED2D14DC123100E9E6D2 /* Frameworks */,
+				0E16ED2B14DC123100E9E6D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E16ED2B14DC123100E9E6D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E16ED2A14DC123100E9E6D2 /* RSAtest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E16ED2D14DC123100E9E6D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E16ED2E14DC123100E9E6D2 /* UIKit.framework */,
+				0E16ED3014DC123100E9E6D2 /* Foundation.framework */,
+				0E16ED3214DC123100E9E6D2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E16ED3414DC123100E9E6D2 /* RSAtest */ = {
+			isa = PBXGroup;
+			children = (
+				0E16ED3D14DC123100E9E6D2 /* MyAppDelegate.h */,
+				0E16ED3E14DC123100E9E6D2 /* MyAppDelegate.m */,
+				0E16ED4014DC123100E9E6D2 /* MainStoryboard.storyboard */,
+				0E16ED4314DC123100E9E6D2 /* MyViewController.h */,
+				0E16ED4414DC123100E9E6D2 /* MyViewController.m */,
+				0E16ED3514DC123100E9E6D2 /* Supporting Files */,
+			);
+			path = RSAtest;
+			sourceTree = "<group>";
+		};
+		0E16ED3514DC123100E9E6D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E16ED3614DC123100E9E6D2 /* RSAtest-Info.plist */,
+				0E16ED3714DC123100E9E6D2 /* InfoPlist.strings */,
+				0E16ED3A14DC123100E9E6D2 /* main.m */,
+				0E16ED3C14DC123100E9E6D2 /* RSAtest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E16ED2914DC123100E9E6D2 /* RSAtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E16ED4814DC123100E9E6D2 /* Build configuration list for PBXNativeTarget "RSAtest" */;
+			buildPhases = (
+				0E16ED2614DC123100E9E6D2 /* Sources */,
+				0E16ED2714DC123100E9E6D2 /* Frameworks */,
+				0E16ED2814DC123100E9E6D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSAtest;
+			productName = RSAtest;
+			productReference = 0E16ED2A14DC123100E9E6D2 /* RSAtest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E16ED2114DC123000E9E6D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 0E16ED2414DC123000E9E6D2 /* Build configuration list for PBXProject "RSAtest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E16ED1F14DC123000E9E6D2;
+			productRefGroup = 0E16ED2B14DC123100E9E6D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E16ED2914DC123100E9E6D2 /* RSAtest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E16ED2814DC123100E9E6D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E16ED3914DC123100E9E6D2 /* InfoPlist.strings in Resources */,
+				0E16ED4214DC123100E9E6D2 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E16ED2614DC123100E9E6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E16ED3B14DC123100E9E6D2 /* main.m in Sources */,
+				0E16ED3F14DC123100E9E6D2 /* MyAppDelegate.m in Sources */,
+				0E16ED4514DC123100E9E6D2 /* MyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0E16ED3714DC123100E9E6D2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E16ED3814DC123100E9E6D2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0E16ED4014DC123100E9E6D2 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E16ED4114DC123100E9E6D2 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E16ED4614DC123100E9E6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0E16ED4714DC123100E9E6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E16ED4914DC123100E9E6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RSAtest/RSAtest-Prefix.pch";
+				INFOPLIST_FILE = "RSAtest/RSAtest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0E16ED4A14DC123100E9E6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RSAtest/RSAtest-Prefix.pch";
+				INFOPLIST_FILE = "RSAtest/RSAtest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E16ED2414DC123000E9E6D2 /* Build configuration list for PBXProject "RSAtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E16ED4614DC123100E9E6D2 /* Debug */,
+				0E16ED4714DC123100E9E6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E16ED4814DC123100E9E6D2 /* Build configuration list for PBXNativeTarget "RSAtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E16ED4914DC123100E9E6D2 /* Debug */,
+				0E16ED4A14DC123100E9E6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E16ED2114DC123000E9E6D2 /* Project object */;
+}
