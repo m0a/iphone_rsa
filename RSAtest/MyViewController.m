@@ -14,6 +14,8 @@
 @synthesize tf;
 @synthesize ent;
 @synthesize det;
+@synthesize publicKey;
+@synthesize privateKey;
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,6 +69,11 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+
+-(void)dealloc{
+    CFRelease(privateKey);
+    CFRelease(publicKey);
+}
 static const UInt8 publicKeyIdentifier[] = "com.apple.sample.publickey222\0";
 static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
 
@@ -92,29 +99,29 @@ static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
     publicKey = NULL;
     privateKey = NULL;
     
-    [keyPairAttr setObject:(__bridge_transfer id)kSecAttrKeyTypeRSA
-                    forKey:(__bridge_transfer id)kSecAttrKeyType];
+    [keyPairAttr setObject:(__bridge id)kSecAttrKeyTypeRSA
+                    forKey:(__bridge id)kSecAttrKeyType];
     
     [keyPairAttr setObject:[NSNumber numberWithInt:1024]
-                    forKey:(__bridge_transfer id)kSecAttrKeySizeInBits];
+                    forKey:(__bridge id)kSecAttrKeySizeInBits];
     
     [privateKeyAttr setObject:[NSNumber numberWithBool:YES]
-                       forKey:(__bridge_transfer id)kSecAttrIsPermanent];
+                       forKey:(__bridge id)kSecAttrIsPermanent];
     
     [privateKeyAttr setObject:privateTag
-                       forKey:(__bridge_transfer id)kSecAttrApplicationTag];
+                       forKey:(__bridge id)kSecAttrApplicationTag];
     
     [publicKeyAttr setObject:[NSNumber numberWithBool:YES]
-                      forKey:(__bridge_transfer id)kSecAttrIsPermanent];
+                      forKey:(__bridge id)kSecAttrIsPermanent];
     
     [publicKeyAttr setObject:publicTag
-                      forKey:(__bridge_transfer id)kSecAttrApplicationTag];
+                      forKey:(__bridge id)kSecAttrApplicationTag];
     
     [keyPairAttr setObject:privateKeyAttr    
-                    forKey:(__bridge_transfer id)kSecPrivateKeyAttrs];
+                    forKey:(__bridge id)kSecPrivateKeyAttrs];
     
     [keyPairAttr setObject:publicKeyAttr
-                    forKey:(__bridge_transfer id)kSecPublicKeyAttrs];
+                    forKey:(__bridge id)kSecPublicKeyAttrs];
     
     status = SecKeyGeneratePair((__bridge CFDictionaryRef)keyPairAttr,
                                 &publicKey, &privateKey);
@@ -132,13 +139,13 @@ static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
                                            length:strlen((const char *)publicKeyIdentifier)]; 
         
         // Set the public key query dictionary.
-        [queryPublicKey setObject:(__bridge_transfer id)kSecClassKey forKey:(__bridge_transfer id)kSecClass];
+        [queryPublicKey setObject:(__bridge id)kSecClassKey forKey:(__bridge id)kSecClass];
         
-        [queryPublicKey setObject:publicTag forKey:(__bridge_transfer id)kSecAttrApplicationTag];
+        [queryPublicKey setObject:publicTag forKey:(__bridge id)kSecAttrApplicationTag];
         
-        [queryPublicKey setObject:(__bridge_transfer id)kSecAttrKeyTypeRSA forKey:(__bridge_transfer id)kSecAttrKeyType];
+        [queryPublicKey setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
         
-        [queryPublicKey setObject:[NSNumber numberWithBool:YES] forKey:(__bridge_transfer id)kSecReturnRef];
+        [queryPublicKey setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)kSecReturnRef];
         
         // Get the key.
         resultCode = SecItemCopyMatching((__bridge CFDictionaryRef)queryPublicKey, (CFTypeRef *)&publicKeyReference);
@@ -151,6 +158,7 @@ static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
         
         queryPublicKey =nil;
     } else {
+        NSLog(@"no use SecItemCopyMatching\n");
         publicKeyReference = publicKey;
     }
     
@@ -219,13 +227,13 @@ static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
                               
                                             length:strlen((const char *)privateKeyIdentifier)]; 
         // Set the private key query dictionary.
-        [queryPrivateKey setObject:(__bridge_transfer id)kSecClassKey forKey:(__bridge_transfer id)kSecClass];
-        [queryPrivateKey setObject:privateTag forKey:(__bridge_transfer id)kSecAttrApplicationTag];
-        [queryPrivateKey setObject:(__bridge_transfer id)kSecAttrKeyTypeRSA forKey:(__bridge_transfer id)kSecAttrKeyType];
-        [queryPrivateKey setObject:[NSNumber numberWithBool:YES] forKey:(__bridge_transfer id)kSecReturnRef];
+        [queryPrivateKey setObject:(__bridge id)kSecClassKey forKey:(__bridge id)kSecClass];
+        [queryPrivateKey setObject:privateTag forKey:(__bridge id)kSecAttrApplicationTag];
+        [queryPrivateKey setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
+        [queryPrivateKey setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)kSecReturnRef];
         
         // Get the key.
-        resultCode = SecItemCopyMatching((__bridge_retained CFDictionaryRef)queryPrivateKey, (CFTypeRef *)&privateKeyReference);
+        resultCode = SecItemCopyMatching((__bridge CFDictionaryRef)queryPrivateKey, (CFTypeRef *)&privateKeyReference);
         NSLog(@"getPrivateKey: result code: %ld", resultCode);
         
         if(resultCode != noErr)
@@ -235,6 +243,7 @@ static const UInt8 privateKeyIdentifier[] = "com.apple.sample.privatekey111\0";
         
         queryPrivateKey = nil;
     } else {
+        NSLog(@"no use SecItemCopyMatching\n");
         privateKeyReference = privateKey;
     }
     

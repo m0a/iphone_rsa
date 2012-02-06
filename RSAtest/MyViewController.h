@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-SecKeyRef oPublicKey;
-SecKeyRef oPrivateKey;
 
-SecKeyRef publicKey;
-SecKeyRef privateKey; 
 
 uint8_t *plainBuffer;
 uint8_t *cipherBuffer;
@@ -23,6 +19,8 @@ const size_t CIPHER_BUFFER_SIZE = 1024;
 const uint32_t PADDING = kSecPaddingNone;
 
 @interface MyViewController : UIViewController
+@property (nonatomic) SecKeyRef publicKey;
+@property (nonatomic) SecKeyRef privateKey; 
 @property (weak, nonatomic) IBOutlet UITextField *tf;
 @property (weak, nonatomic) IBOutlet UILabel *ent;
 @property (weak, nonatomic) IBOutlet UILabel *det;
